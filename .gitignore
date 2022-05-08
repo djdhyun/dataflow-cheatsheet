@@ -1,0 +1,16 @@
+### Python
+# Byte-compiled / optimized / DLL files
+__pycache__/
+*.py[cod]
+*$py.class
+.pytest_cache/
+
+# Environments
+.venv
+env.sh
+
+# So as not to commit a credential file unintentionally
+*.json
+
+# Temporary files
+*.swp
