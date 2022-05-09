@@ -5,21 +5,21 @@ Dataflow Python Scripts Cheatsheets
 ## Prerequisites
 
 1. Your GCP Project with Dataflow API enabled.
-2. A service account having privileged access to Dataflow. (`roles/dataflow.admin`)
+2. A service account with privileged access to Dataflow. (`roles/dataflow.admin`)
 3. A GCP Credential file of the service account mentioned above.
-4. Google Cloud Cli(`gcloud`)
+4. Google Cloud Cli (`gcloud`)
 
-```shell
+```
 $ brew install google-cloud-sdk
 ```
 
-5. An activated gcloud config configuration corresponding with your GCP Project. You need this to submit dataflow tasks to your as intended GCP Project by `gcloud` within sample scripts in the repo.
+5. An activated `gcloud config configuration` corresponding with your GCP Project. You need this to submit dataflow tasks to your as intended GCP Project by `gcloud` within sample scripts in the repo.
 
-```shell
+```
 gcloud config configurations create ${your_config_name}
 gcloud config set project ${your_gcp_project_id}
 
-# or just activate configuration to your project if it already existed
+# Or activate your configuration to your project if it already exists
 gcloud config configurations activate ${your_config_name}
 ```
 
