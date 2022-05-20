@@ -1,0 +1,22 @@
+{
+  "description": "Say hello to the world",
+  "name": "Hello World",
+  "parameters": [
+    {
+      "name": "header",
+      "helpText": "This header string will be prefix of each word.",
+      "label": "Your header string",
+      "isOptional": false
+    },
+    {
+      "name": "output",
+      "label": "Output file directory in Cloud Storage",
+      "helpText": "The path and filename prefix for writing output files. e.g. gs://your-bucket/your-path",
+      "regexes": [
+        "^gs:\\/\\/[^\\n\\r]+$"
+      ],
+      "paramType": "GCS_WRITE_FOLDER",
+      "isOptional": false
+    }
+  ]
+}
