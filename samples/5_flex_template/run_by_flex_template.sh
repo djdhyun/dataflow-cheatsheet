@@ -1,5 +1,5 @@
 TEMPLATE_NAME=helloworld
-TEMPLATE_TAG=1.0.5
+TEMPLATE_TAG=1.0.0
 
 JOB_NAME=helloworld-test-run-$(date +%Y%m%dt%H%M%S)
 OUTPUT=${GCS_PATH}/out/${JOB_NAME}/output

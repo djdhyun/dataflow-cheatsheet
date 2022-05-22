@@ -1,5 +1,5 @@
 TEMPLATE_NAME=helloworld
-TEMPLATE_TAG=1.0.5
+TEMPLATE_TAG=1.0.0
 TEMPLATE_IMAGE=gcr.io/${GCP_PROJECT}/${TEMPLATE_NAME}:${TEMPLATE_TAG}
 
 # To explore inside a container
