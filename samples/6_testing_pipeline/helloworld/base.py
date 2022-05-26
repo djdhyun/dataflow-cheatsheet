@@ -51,7 +51,7 @@ class BaseTransform(PTransform, metaclass=ABCMeta):
     """
 
     def __init__(self, pipeline_options: PipelineOptions):
-        """Instantiate internal states with static option values"""
+        """Initialize internal states with static option values"""
         super().__init__()
         self.initiated = False
         self.pipeline_options = pipeline_options
@@ -59,7 +59,7 @@ class BaseTransform(PTransform, metaclass=ABCMeta):
     @abstractmethod
     def initiate(self, **options: Dict[str, ValueProvider]):
         """
-        Prepare internal states, tools for the transformations using ValueProviders.
+        Construct any internal states or tools for `transform` using ValueProviders.
         This code block will be run only once in a lazy way before the transformation process begins.
 
         You can customize the method signature by separating each named parameter from options for readability.
@@ -69,7 +69,7 @@ class BaseTransform(PTransform, metaclass=ABCMeta):
     @abstractmethod
     def transform(self, pcoll: PCollection) -> PCollection:
         """
-        Define the transformation logic between input and output PCollections
+        Define a transformation logic between input and output PCollections
         """
 
     def expand(self, input_or_inputs: PCollection) -> PCollection:
